@@ -36,9 +36,8 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
     font-family: $headingFontFamily;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 hr.star-light,
@@ -102,10 +101,9 @@ header img {
 
 header .intro-text .name {
     display: block;
-    text-transform: uppercase;
     font-family: $headingFontFamily;
     font-size: 2em;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 header .intro-text .skills {
@@ -153,9 +151,8 @@ header .intro-text .skills {
 }
 
 .navbar {
-    text-transform: uppercase;
     font-family: $headingFontFamily;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .navbar a:focus {
