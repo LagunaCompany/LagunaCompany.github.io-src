@@ -70,6 +70,10 @@ hr.star-light:after {
     background-color: $accentColor;
 }
 
+header hr.star-light:after {
+    background: transparent;
+}
+
 hr.star-primary {
     border-color: #2c3e50;
 }
@@ -86,7 +90,8 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: $accentColor;
+    background: url(../images/header-background.jpg) no-repeat 0 0 #02448a;
+    background-size: cover;
 }
 
 header .container {
@@ -97,6 +102,10 @@ header .container {
 header img {
     display: block;
     margin: 0 auto 20px;
+}
+
+header .intro-text {
+    text-shadow: 4px 4px 4px #000000;
 }
 
 header .intro-text .name {
