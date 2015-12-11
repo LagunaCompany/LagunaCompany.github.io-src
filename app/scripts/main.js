@@ -1,5 +1,6 @@
 'use strict';
 
+// Function from http://stackoverflow.com/questions/17359232/how-to-tell-jshint-to-ignore-all-undefined-variables-in-one-file
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
