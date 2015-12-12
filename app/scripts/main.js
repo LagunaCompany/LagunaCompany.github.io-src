@@ -16,10 +16,16 @@ promise.done(function(data) {
 
 	/*globals Chart, Handlebars*/
 
-	var chartData = [];
-	var chartContext = document.getElementById('treehouse-scorecard-points').getContext('2d');
-	var chart = null;
+	// Points chart vars
+	var chartData = [],
+		chartContext = document.getElementById('treehouse-scorecard-points').getContext('2d'),
+		chart = null;
 
+	// Badges vars
+	var badgeTemplate = Handlebars.compile($('#template-treehouse-badge').html()),
+		badgeWrapper = $('.treehouse-badge-wrapper');
+
+	// Points processing
 	for (var category in data.points) {
 
 		var points = data.points[category];
@@ -41,17 +47,13 @@ promise.done(function(data) {
 
 	chart = new Chart(chartContext).Doughnut(chartData);
 
-	for (var i = 0; i < data.badges.length; i++) {
+	// Badges processing
+	for (var i = data.badges.length-20; i < data.badges.length; i++) {
 
-		var source   = $('#template-treehouse-badge').html();
-		var template = Handlebars.compile(source);
-		var context = data.badges[i];
-		var html    = template(context);
+		var html = badgeTemplate(data.badges[i]);
 
-		$('.treehouse-badge-wrapper').append(html);
+		badgeWrapper.append(html);
 
 	}
-
-	
 
 });
