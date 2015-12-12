@@ -30,8 +30,17 @@ $accentColor: #02448a;
 .portfolio-item {
   padding-bottom: 15px;
   padding-top: 15px;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  -ms-transition: all 250ms ease-in;
+  -o-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
 
   &:hover {
     box-shadow: 0 2px 20px rgba(0,0,0,0.2);
   }
+}
+
+#treehouse-scorecard.portfolio .portfolio-item .portfolio-link .caption .caption-content {
+  top: 20%;
 }
