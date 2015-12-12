@@ -48,7 +48,14 @@ promise.done(function(data) {
 	chart = new Chart(chartContext).Doughnut(chartData);
 
 	// Badges processing
-	for (var i = data.badges.length-20; i < data.badges.length; i++) {
+	for (var i = data.badges.length-12; i < data.badges.length; i++) {
+
+		/* jshint ignore:start */
+		var badgeDate = new Date(data.badges[i].earned_date),
+			badgeDateFormatted = badgeDate.toLocaleDateString();
+
+		data.badges[i].earned_date = badgeDateFormatted;
+		/* jshint ignore:end */
 
 		var html = badgeTemplate(data.badges[i]);
 
