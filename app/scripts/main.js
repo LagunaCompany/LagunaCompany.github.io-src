@@ -14,9 +14,7 @@ var promise = $.getJSON('https://teamtreehouse.com/ajayprasannan.json');
 
 promise.done(function(data) {
 
-	/*globals Chart */
-
-	console.log(data);
+	/*globals Chart, Handlebars*/
 
 	var chartData = [];
 	var chartContext = document.getElementById('treehouse-scorecard-points').getContext('2d');
@@ -42,5 +40,18 @@ promise.done(function(data) {
 	}
 
 	chart = new Chart(chartContext).Doughnut(chartData);
+
+	for (var i = 0; i < data.badges.length; i++) {
+
+		var source   = $('#template-treehouse-badge').html();
+		var template = Handlebars.compile(source);
+		var context = data.badges[i];
+		var html    = template(context);
+
+		$('.treehouse-badge-wrapper').append(html);
+
+	}
+
+	
 
 });
