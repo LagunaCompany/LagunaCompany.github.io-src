@@ -184,6 +184,7 @@
             <div class="row treehouse-badge-wrapper">
                  
             </div>
+            <hr />
         </div>
     </section>
 
@@ -360,12 +361,12 @@
 
     <script id="template-treehouse-badge" type="text/x-handlebars-template">
         <div class="col-sm-2 portfolio-item treehouse-scorecard-badge" data-badge-id="{{id}}">
-            <a href="#" class="portfolio-link" data-toggle="modal">
+            <a title="{{name}}" href="{{url}}" class="portfolio-link">
                 <div class="caption">
                     <div class="caption-content">
                         <h4>{{name}}</h4>
                         <p>Achieved: {{earned_date}}</p>
-                        <i class="fa fa-search-plus fa-3x"></i>
+                        <i class="fa fa-external-link fa-2x"></i>
                     </div>
                 </div>
                 <img src="{{icon_url}}" class="img-responsive" alt="Badge icon for {{name}}">
