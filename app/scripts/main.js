@@ -67,9 +67,13 @@ promise.done(function(data) {
 
 (function(){
 
+  /* jshint ignore:start */
+
   // Init Flickity for slider functionality
   var flickity = new Flickity('.carousel', {
   // options
   });
+
+  /* jshint ignore:end */
 
 })();
