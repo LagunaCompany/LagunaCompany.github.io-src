@@ -70,6 +70,8 @@ promise.done(function(data) {
   /*globals Flickity*/
 
   // Init Flickity for slider functionality
-  new Flickity('.carousel', {});
+  new Flickity('.carousel', {
+    cellAlign: 'left'
+  });
 
 })();
